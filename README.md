@@ -5,6 +5,7 @@
   Step-1 : Create EC2 instance from AMI
 
   Below are the region wise AMI ids which we can use: 
+  ```
   "SpinnakerAMIId": {
             "sa-east-1": {
                 "AMI": "ami-f3e1769f"
@@ -40,13 +41,15 @@
                 "AMI": "ami-060ee9b36057db545"
             }
         }
+ ```
         
   Create EC2 instance from anyone of the above AMI's.
 
 # Step-2 : Create BaseAMI role using cloud formation or manually
 
   Use below clodformation template for creation of role:
-  {
+ ```
+ {
     "AWSTemplateFormatVersion": "2010-09-09",
     "Description": "CreateBaseRole",
     "Resources": {
@@ -76,7 +79,7 @@
     "Outputs": {
     }
 }
-
+```
 # Step-3 : Update AWS Provider configuration and restart spinnaker
 
     /opt/spinnaker/bin/stop_spinnaker.sh
@@ -100,6 +103,7 @@ For windows create below file :
 
 c:/Users/<<USER>>/.ssh/config:
 
+```
 Host spinnaker
     HostName <<REPLACE WITH PUBLIC DNS OF EC2 INSTANCE>>
     IdentityFile /path/to/private/key
@@ -107,6 +111,7 @@ Host spinnaker
     LocalForward 8084 127.0.0.1:8084
     LocalForward 8087 127.0.0.1:8087
     User ubuntu
+```
 
   Execute: ssh -f -N spinnaker
   Open http://localhost:9000/ in your web browser
