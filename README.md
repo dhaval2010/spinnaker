@@ -116,3 +116,10 @@ Host spinnaker
   Execute: ssh -f -N spinnaker
   Open http://localhost:9000/ in your web browser
  
+ 
+ References:
+ https://www.gremlin.com/chaos-monkey/advanced-developer-guide/
+ https://www.spinnaker.io/setup/install/deploy/
+ https://www.spinnaker.io/setup/quickstart/faq//#i-want-to-expose-localdebian-spinnaker-on-a-public-ip-address-but-it-always-binds-to-localhost
+ https://www.spinnaker.io/guides/tutorials/codelabs/hello-deployment/
+ 
